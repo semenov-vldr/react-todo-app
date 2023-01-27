@@ -7,9 +7,9 @@ const TodoList = ({list, remove}) => {
         list?.length > 0 ? (
           <ul className="todo-list">
 
-      {list.map(todo => (
+      {list.map((todo, index) => (
           <div className="todo">
-            <li>{todo}</li>
+            <li key={index}>{todo}</li>
             <button 
             className="delete-button"
             onClick={() => remove(todo)}
